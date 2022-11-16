@@ -30,7 +30,7 @@ if "IN_DEVELOPMENT" in os.environ:
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ["in-focus.herokuapp.com","localhost"]
+ALLOWED_HOSTS = ["infocus.herokuapp.com","localhost"]
 
 
 # Application definition
