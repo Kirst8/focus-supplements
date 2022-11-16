@@ -1,0 +1,16 @@
+{% load humanize %}
+<div class="row mt-2">
+    <div class="offset-1 col-3">
+        {% if item.item.image %}
+        <img src="{{ MEDIA_URL }}{{ item.item.image }}" alt="image of {{ item.item.name" class="table-image">
+        {% else %}
+          <img src="{{ MEDIA_URL }}no_image.png" 
+          alt="No image found for {{ item.item.name }}" class="table-image">
+        {% endif %}
+    </div>
+    <div class=" offset-2 col-6 ">
+        <p class="fs-4">{{ item.item.name }}</p>
+        <p class=" fs-5 text-muted">Quantity: {{ item.quantity }}</p>
+        <p class=" fs-5 text-muted">Price: €{{ item.item.price|intcomma }}</p>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+
+<div class="toast successful-toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-delay="500" >
+    <div>
+        <button type="button" class="btn-close float-end" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        <div class="row">
+            <div class="col">
+                <p class="fs-4">{{ message }}</p>
+                <hr>
+            </div>
+        </div>
+         <!-- code from stack overflow to add
+             extra tags to messages details in readme -->
+        {% if "show_items" in message.tags %}
+            {% if item_count > 0 %}
+        {% if grand_total %}
+        <p class="fs-5">Your Cart has {{ item_count }}
+            {% if item_count == 1 %}
+            item
+            {% else %}
+            items
+            {% endif %}
+        </p>
+        <div class="cart-items-wrapper">
+            {% for item in cart_items %}
+         {% include 'includes/cart-items.html' %}
+            {% endfor %}
+        </div>
+        <div class="cart-links d-flex justify-content-end">
+            <a href="{% url 'view_cart' %}" class="item-link-light item-link-button  flex-center">View
+                Cart</a>
+            <a href="{% url 'checkout' %}"
+                class="item-link-dark item-link-button  flex-center">
+                Checkout</a>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+</div>

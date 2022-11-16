@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load static %}
+{% load wishlist_tools %}
+{% block title %}
+All Items
+{% endblock %}
+{% block header %}
+{% include 'includes/nav-background.html' %}
+{% endblock %}
+{% block main_content %}
+
+<div class="container">
+    <!-- Title Section -->
+    <div class="row">
+        <div class="col flex-center page-heading">
+            {% if current_category %}
+            <h1>{{ current_category.display_name }}</h1>
+            {% else %}
+            <h1>Our Collection</h1>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="flex-row-between items-subheading">
+                    <p>No of items: {{ page_obj.paginator.count }}</p>
+                    <a href="{% url 'all_items' %}">All Items</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="sort-select">
+                    <label class="visually-hidden" for="sort-selector">Sort By</label>
+                    <select name="sort-selector" id="sort-selector">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                            accending</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                            descending</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                            accending</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                            descendings</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- items section -->
+    <div class="row items-row">
+        {% if page_obj.paginator.count == 0 %}
+            <p class="fs-1 flex-center">No Items found. Please search again.</p>
+        {% endif %}
+        {% for item in page_obj %}
+        <div class="col-12 col-md-6 col-lg-4 item-col">
+            <div class="item-container flex-center">
+                <div class="img-container">
+                    <!-- displays the like unlike buttons for the wishlist -->
+                    {% if request.user.is_authenticated %}
+                    {% if item.id|ifinlist:wishlist_items == True %}
+                    {% include 'includes/wishlist_remove.html' %}
+                    {% else %}
+                    {% include 'includes/wishlist_add.html' %}
+                    {% endif %}
+                    {% endif %}
+                    {% if item.image %}
+                    <a href="{% url 'single_item' item.id %}">
+                        <img src="{{ MEDIA_URL }}{{ item.image }}"
+                            alt="image for {{ item.name }}"></a>
+                    {% else %}
+                    <a href="{% url 'single_item' item.id %}">
+                        <img src="{{ MEDIA_URL }}no_image.png"
+                            alt="No image found for {{ item.name }}"></a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="item-details all-item-details">
+                <h2>{{ item.name }}</h2>
+                <p>€ {{ item.price|intcomma }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- pagination taking from djano documintation that I changed slightly and styled with css -->
+    <div class="paginate-items">
+        <div class="current">
+            <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+        </div>
+        <!-- pagination for search -->
+        {% if search %}
+            <div class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1&query={{ search }}&sort={{ sort }}&direction={{ direction }}">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}&query={{ search }}&sort={{ sort }}&direction={{ direction }}">&laquo;
+                        Previous</a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}&query={{ search }}&sort={{ sort }}&direction={{ direction }}">Next
+                        &raquo;</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}&query={{ search }}&sort={{ sort }}&direction={{ direction }}">Last
+                        &raquo;</a>
+                {% endif %}
+            </div>
+            <!-- pagination for categories -->
+        {% elif current_category %}
+            <div class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1&category={{ current_category.name }}&sort={{ sort }}&direction={{ direction }}">&laquo;
+                        First</a>
+                    <a
+                        href="?page={{ page_obj.previous_page_number }}&category={{ current_category.name }}&sort={{ sort }}&direction={{ direction }}">&laquo;
+                        Previous</a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <a
+                        href="?page={{ page_obj.next_page_number }}&category={{ current_category.name }}&sort={{ sort }}&direction={{ direction }}">Next
+                        &raquo;</a>
+                    <a
+                        href="?page={{ page_obj.paginator.num_pages }}&category={{ current_category.name }}&sort={{ sort }}&direction={{ direction }}">Last
+                        &raquo;</a>
+                {% endif %}
+            </div>
+    
+
+            <!-- pagination without extra url queries -->
+        {% else %}
+            <div class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1&sort={{ sort }}&direction={{ direction }}">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}&sort={{ sort }}&direction={{ direction }}">&laquo;
+                        Previous</a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}&sort={{ sort }}&direction={{ direction }}">Next &raquo;</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}&sort={{ sort }}&direction={{ direction }}">Last
+                        &raquo;</a>
+                {% endif %}
+             </div>
+        {% endif %}
+
+
+    </div>
+</div>
+{% endblock %}
+
+{% block other_end_js %}
+{{ block.super }}
+<script src="{% static 'stock/js/stock.js' %}"></script>
+<script>
+    let csrfToken = "{{ csrf_token }}"
+</script>
+<script src="{% static 'wishlist/js/wishlist.js' %}"></script>
+{% endblock %}

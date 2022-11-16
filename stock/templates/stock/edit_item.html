@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block other_css %}
+<link rel="stylesheet" href="{% static 'stock/css/stock.css' %}">
+{% endblock %}
+{% block title %}
+Add Item
+{% endblock %}
+{% block header %}
+{% include 'includes/nav-background.html' %}
+{% endblock %}
+{% block main_content %}
+{% include "stock/includes/stock_control_form.html" %}
+{% endblock %}
+{% block other_end_js %}
+{{ block.super }}
+<script src="{% static 'stock/js/widget.js' %}"></script>
+{% endblock %}

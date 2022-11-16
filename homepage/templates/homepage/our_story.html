@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}
+Our Story
+{% endblock %}
+{% block header %}
+{% include 'includes/nav-background.html' %}
+{% endblock %}
+{% block main_content %}
+<!-- hero section -->
+<div class="container-fluid ">
+    <div class="row hero-container">
+        <div class="col our-story-hero-col flex-center">
+            <h1 class="text-shadow">Our Story</h1>
+        </div>
+    </div>
+</div>
+<!-- about section -->
+<div class="container">
+    <div class="row">
+        <div class="col story-about-col">
+            <p>Started in Dublin in 2021 Abode.com is an interiors specialist passionate about design and quality. We
+                handpick all items we sell. We work closely with designers to ensure nothing but the best in design and
+                quality for our customers.</p>
+        </div>
+    </div>
+</div>
+<!-- design section -->
+<div class="container-fluid">
+    <div class="row animation-element">
+        <div class="col-12 col-md-6 our-story-col flex-center ">
+            <h2>Design</h2>
+            <p>At Abode.com we are passionate about design. Our team works very closely with our furniture designers to
+                bring you one off design pieces for your home.</p>
+        </div>
+        <div class="col-12 our-story-col flex-center  col-md-6">
+            <img src="{{ MEDIA_URL }}hero.jpg" alt="Image of our designer furniture">
+        </div>
+    </div>
+</div>
+<!-- sustanibility section -->
+<!-- for smaller screen sizes -->
+<div class="container-fluid d-md-none">
+    <div class="row animation-element">
+        <div class="col-12 col-md-6 our-story-col flex-center">
+            <h2>Sustainability</h2>
+            <p>At Abode.com, sustainability is as important to us as the design and quality of our products. We are
+                working closely with our manufactures to ensure all our materials are both ethically sourced and
+                sustainable. We are also working to becoming carbon neutral.</p>
+        </div>
+        <div class="col-12 our-story-col flex-center  col-md-6">
+            <img src="{{ MEDIA_URL }}our-story-sustanable.jpg" alt="Image of our designer furniture">
+        </div>
+    </div>
+</div>
+<!-- for bigger screen sizes -->
+<div class="container-fluid d-none d-md-block">
+    <div class="row animation-element">
+        <div class="col-12 our-story-col flex-center  col-md-6">
+            <img src="{{ MEDIA_URL }}our-story-sustanable.jpg" alt="Image of our designer furniture">
+        </div>
+        <div class="col-12 col-md-6 our-story-col flex-center">
+            <h2>Sustainability</h2>
+            <p>At Abode.com, sustainability is as important to us as the design and quality of our products. We are
+                working closely with our manufactures to ensure all our materials are both ethically sourced and
+                sustainable. We are also working to becoming carbon neutral.</p>
+        </div>
+    </div>
+</div>
+<!-- Our promise Section -->
+<div class="container-fluid">
+    <div class="row animation-element">
+        <div class="col-12 col-md-6 our-story-col flex-center">
+            <h2>Our Promise</h2>
+            <p>At Abode.com we promise to provide excellent design and quality delivered to you as quickly as possible.
+            </p>
+        </div>
+        <div class="col-12 our-story-col flex-center  col-md-6">
+            <img src="{{ MEDIA_URL }}our-story-our-promise.jpg" alt="Image of our designer furniture">
+        </div>
+    </div>
+</div>
+<!-- shop now button -->
+<div class="container">
+    <div class="row animation-element">
+        <div class="col flex-center our-story-shop-now">
+            <a href="{% url 'all_items' %}" class="link-button link-button-dark flex-center">Shop Collection</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

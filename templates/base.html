@@ -1,0 +1,265 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Line Awesome icons-->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Other Css -->
+    {% block other_css %}
+    {% endblock %}
+    <!-- bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <!-- Stripe javascript -->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% block other_head_js %}
+    {% endblock %}
+    <title>Abode.com
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="top-navigation flex-row-between">
+                            <button class="hamburger" aria-haspopup="true" aria-expanded="false"
+                                aria-label="open navigation">
+                                <span class="line line1" aria-hidden="true">
+                                </span>
+                                <span class="line line2" aria-hidden="true">
+                                </span>
+                                <span class="line line3" aria-hidden="true">
+                                </span>
+                            </button>
+                            <a class="logo text-shadow" href="{% url 'home_page' %}">In focus
+                            </a>
+                            <ul>
+                                <li class="d-none d-md-block">
+                                    <a class="top-nav-item " href="{% url 'view_wishlist' %}">Wishlist</a>
+                                </li>
+                                <li class="top-nav-item  d-md-none">
+                                    <a href="{% url 'view_wishlist' %}">
+                                        <i class="lar la-heart " aria-hidden="true"></i>
+                                        <span class="visually-hidden">link to wishlist</span>
+                                    </a>
+                                </li>
+                                <li class="top-nav-item d-none d-md-block dropdown-link">Account
+                                </li>
+                                <li class="top-nav-item dropdown-link  d-md-none">
+                                    <i class="las la-user" aria-hidden="true">
+                                    </i>
+                                    <span class="visually-hidden">link to account</span>
+                                </li>
+                                <li>
+                                    <a class="top-nav-item d-none d-md-block" href="{% url 'view_cart' %}">Cart
+                                        {% if item_count %}
+                                        <span class="cart-number">
+                                            {{ item_count }}
+                                        </span>
+                                        {% endif %}
+                                    </a>
+                                </li>
+                                <li class="d-md-none">
+                                    <a class="top-nav-item" href="{% url 'view_cart' %}">
+                                        <i class="las la-shopping-bag " aria-hidden="true"></i>
+                                        {% if item_count %}
+                                        <span class="cart-number d-md-none">
+                                            {{ item_count }}
+                                        </span>
+                                        {% endif %}
+                                        <span class="visually-hidden">link to shopping cart</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="account-dropdown" aria-labelledby="account-options">
+                            <button class="dropdown-close flex-center" aria-label="Close Navigation">
+                                <span class="line-x" aria-hidden="true"></span>
+                                <span class="line-y" aria-hidden="true"></span>
+                            </button>
+                            <ul id="account-options" class="account-menu">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <li class="account-item">
+                                    <a href="{% url 'add_item' %}">Stock Control
+                                    </a>
+                                </li>
+                                <li class="account-item">
+                                    <a href="{% url 'add_post' %}">
+                                        Add Blog Post
+                                    </a>
+                                </li>
+                                {% endif %}
+                                <li class="account-item">
+                                    <a href="{% url 'user_profile' %}">My Account
+                                    </a>
+                                </li>
+                                <li class="account-item">
+                                    <a href="{% url 'account_logout' %}">Logout
+                                    </a>
+                                </li>
+                                {% else %}
+                                <li class="account-item">
+                                    <a href="{% url 'account_login' %}">Login
+                                    </a>
+                                </li>
+                                <li class="account-item">
+                                    <a href="{% url 'account_signup' %}">Signup
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="side-nav">
+                            <button class="nav-close flex-center" aria-label="Close Navigation">
+                                <span class="line-x" aria-hidden="true"></span>
+                                <span class="line-y" aria-hidden="true"></span>
+                            </button>
+                            <ul class="side-nav-menu">
+                                <li class="side-nav-item search-navlink">Search
+                                    <i class="las la-search nav-icon" aria-hidden="true"></i>
+                                </li>
+                                <li class="search-sublist sublist-hidden">
+                                    <form method="GET" action="{% url 'all_items' %}">
+                                        <label class="visually-hidden" for="query">Search</label>
+                                        <input id="query" type="text" name="query" placeholder="search">
+                                        <button type="submit">Search</button>
+                                    </form>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="{% url 'home_page' %}">Homepage</a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="{% url 'all_items' %}">Shop Collection</a>
+                                </li>
+                                <li class="side-nav-item furniture-nav-link">
+                                    Furniture
+                                    <i class="las la-angle-right nav-icon" aria-hidden="true"></i>
+                                    <ul class="furniture-sublist sublist-hidden ">
+                                        <li>
+                                            <a href="{% url 'all_items' %}?category=sofas">Sofas</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'all_items' %}?category=chairs">Chairs
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'all_items' %}?category=tables">Tables</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'all_items' %}?category=sideboards">Sideboards</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="{% url 'all_items' %}?category=lighting">Lighting</a>
+                                </li>
+                                <li class="side-nav-item ">
+                                    <a href="{% url 'all_items' %}?category=accessories">Accessories</a>
+                                </li>
+                                <li class="side-nav-item ">
+                                    <a href="{% url 'view_blog' %}?category=accessories">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {% block header %}
+        {% endblock %}
+        {% if messages %}
+        <div class="message-container">
+            <!-- adds the django messages to page using bootstrap toasts -->
+            {% for message in messages %}
+                {% with message.level as level %}
+            {% if level == 25 %}
+                {% include "includes/toasts/successful_toast.html" %}
+            {% elif level == 30 %}
+                {% include "includes/toasts/warning_toast.html" %}
+            {% elif level == 40 %}
+                {% include "includes/toasts/error_toast.html" %}
+            {% else %}
+                {% include "includes/toasts/info_toast.html" %}
+            {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+    <main>
+        {% block main_content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <!-- Footer section -->
+        <div class="container-fluid footer-container">
+            <div class="row">
+                <div class="col-12 col-md-6 contact-col flex-center">
+                    <h3>We're here to help.</h3>
+                    <p>Email us on
+                        <a href="mailto:abode@email.com" target="_blank"
+                                rel="noreferrer">
+                            abode@email.com
+                        </a>
+                    </p>
+                    <p>Call us at +353 (0)15555555</p>
+                    <a href="{% url 'contact' %}">Or you can contact us here <i class="las la-angle-right"
+                            aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-12 social-col col-md-6 ">
+                    <h3>Follow us on social</h3>
+                    <ul class="social-media flex-center">
+                        <li>
+                            <a class="social-media-links" href="https://www.instagram.com/" target="_blank"
+                                rel="noreferrer">
+                                <i class="lab la-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram Link.</span></a>
+                        </li>
+                        <li>
+                            <a class="social-media-links" href="https://www.facebook.com/" target="_blank"
+                                rel="noreferrer">
+                                <i class="lab la-facebook-square" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook Link.</span></a>
+                        </li>
+                        <li>
+                            <a class="social-media-links" href="https://www.twitter.com/" target="_blank"
+                                rel="noreferrer">
+                                <i class="lab la-twitter-square" aria-hidden="true"></i>
+                                <span class="sr-only">Twitter Link.</span></a>
+                        </li>
+                        <li>
+                            <a class="social-media-links" href="https://www.pinterest.ie/" target="_blank"
+                                rel="noreferrer">
+                                <i class="lab la-pinterest" aria-hidden="true"></i>
+                                <span class="sr-only">Pinterest link</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% block other_end_js %}
+    {% endblock %}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
