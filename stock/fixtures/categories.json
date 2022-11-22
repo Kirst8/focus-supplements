@@ -2,56 +2,24 @@
         "pk": 1,
         "model": "stock.category",
         "fields": {
-            "name": "sofas",
-            "display_name": "Sofas"
+            "name": "camaras",
+            "display_name": "Camaras"
         }
     },
     {
         "pk": 2,
         "model": "stock.category",
         "fields": {
-            "name": "chairs",
-            "display_name": "Chairs"
+            "name": "drones",
+            "display_name": "Drones"
         }
     },
     {
         "pk": 3,
         "model": "stock.category",
         "fields": {
-            "name": "tables",
-            "display_name": "Tables"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "stock.category",
-        "fields": {
-            "name": "sideboards",
-            "display_name": "Sideboards"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "stock.category",
-        "fields": {
-            "name": "lighting",
-            "display_name": "Lighting"
-        }
-    },
-    {
-        "pk": 6,
-        "model": "stock.category",
-        "fields": {
-            "name": "accseeories",
-            "display_name": "Accessories"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "stock.category",
-        "fields": {
-            "name": "new_in",
-            "display_name": "New In"
+            "name": "gopro",
+            "display_name": "Go Pro"
         }
     }
 ]

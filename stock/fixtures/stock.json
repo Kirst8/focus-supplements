@@ -3,22 +3,22 @@
         "model": "stock.item",
         "fields": {
             "code": 1,
-            "name": "Cocoon Sofa",
-            "description": "Luxury fabric sofa with an interesting Cocoon shape.",
-            "price": "1299.00",
+            "name": "Nikon",
+            "description": "Black Nikon D7500.",
+            "price": "750.00",
             "category": 1,
-            "image": "cocoon-sofa.jpg"
+            "image": "nikon1.jpg"
         }
     }, {
         "pk": 2,
         "model": "stock.item",
         "fields": {
             "code": 2,
-            "name": "Graphite Fabric Sofa",
-            "description": "Luxury fabric sofa in a rich graphite shade.",
+            "name": "Nikon-83",
+            "description": "Nikon black 83.",
             "price": "1099.00",
             "category": 1,
-            "image": "dark-grey-sofa.jpg"
+            "image": "nikon2"
         }
     },
     {
@@ -26,11 +26,11 @@
         "model": "stock.item",
         "fields": {
             "code": 3,
-            "name": "Emerald Fabric Sofa",
-            "description": "A rich emerald green fabric sofa in a rich velvet material.",
-            "price": "1499.00",
+            "name": "canon",
+            "description": "canon EOS2000 Black.",
+            "price": "580",
             "category": 1,
-            "image": "green-sofa.jpg"
+            "image": "canon1.jpg"
         }
     },
     {
@@ -38,22 +38,22 @@
         "model": "stock.item",
         "fields": {
             "code": 4,
-            "name": "Grey Fabric sofa",
-            "description": "Grey fabric sofa build with extremely comfortable cushions.",
+            "name": "Canon 2000",
+            "description": "canon black EOS200D",
             "price": "1199.00",
-            "category": 7,
-            "image": "grey-sofa-2.jpg"
+            "category": 1,
+            "image": "canon2.jpg"
         }
     }, {
         "pk": 5,
         "model": "stock.item",
         "fields": {
             "code": 5,
-            "name": "Light Grey Fabric Sofa",
-            "description": "Luxury light grey fabric sofa.",
-            "price": "1399.00",
+            "name": "sony",
+            "description": "sony black 2,8",
+            "price": "250.00",
             "category": 1,
-            "image": "grey-sofa.jpg"
+            "image": "sony1.jpg"
         }
     },
     {
@@ -61,22 +61,22 @@
         "model": "stock.item",
         "fields": {
             "code": 6,
-            "name": "Orange Fabric Sofa",
-            "description": "Playful and colourful Orange sofa to add a pop of colour to your living room.",
+            "name": "sony",
+            "description": "sony black vario-sonnar",
             "price": "1259.00",
             "category": 1,
-            "image": "orange-sofa.jpg"
+            "image": "sony1.jpg"
         }
     }, {
         "pk": 7,
         "model": "stock.item",
         "fields": {
             "code": 7,
-            "name": "Pink 3 Piece Set",
-            "description": "Luxury 3 piece seating set for a classic living room.",
-            "price": "1899.00",
-            "category": 1,
-            "image": "pink-3piece-set.jpg"
+            "name": "Dj mini",
+            "description": "Drone mini pro 3 ",
+            "price": "850.00",
+            "category": 2,
+            "image": "drone1.jpg"
         }
     },
     {
@@ -84,11 +84,11 @@
         "model": "stock.item",
         "fields": {
             "code": 8,
-            "name": "Tan Fabric Sofa",
-            "description": "Luxury tan fabric sofa excellent to add a mid-century touch.",
+            "name": "Dj mini-max pro",
+            "description": "drone mini-max pro dj",
             "price": "1199.00",
-            "category": 1,
-            "image": "tan-fabric-sofa.jpg"
+            "category": 2,
+            "image": "drone3.jpg"
         }
     },
     {
@@ -96,11 +96,11 @@
         "model": "stock.item",
         "fields": {
             "code": 9,
-            "name": "Tan Leather Sofa",
-            "description": "A tan leather sofa for the modern minimalist interior.",
-            "price": "1699.00",
-            "category": 7,
-            "image": "tan-leather-sofa.jpg"
+            "name": "Dj pro4",
+            "description": "drone dj pro-4.",
+            "price": "1050.00",
+            "category": 2,
+            "image": "drone2.jpg"
         }
     },
     {
@@ -108,11 +108,11 @@
         "model": "stock.item",
         "fields": {
             "code": 10,
-            "name": "Blush Pink Sofa",
-            "description": "A beautiful blush pink fabric sofa in a very classic shape.",
+            "name": "Dj mini 4",
+            "description": "drone dj mini-pro 4",
             "price": "1399.00",
             "category": 1,
-            "image": "pink-sofa.jpg"
+            "image": "drone4.jpg"
         }
     },
     {
@@ -120,11 +120,11 @@
         "model": "stock.item",
         "fields": {
             "code": 11,
-            "name": "Black Leather Chair",
-            "description": " A contemporary shape finished in black leather.",
+            "name": "go pro 3",
+            "description": " go pro max 3",
             "price": "399.00",
             "category": 2,
-            "image": "black-leather-chair.jpg"
+            "image": "gopro3"
         }
     },
     {
@@ -132,11 +132,11 @@
         "model": "stock.item",
         "fields": {
             "code": 12,
-            "name": "Black Wicker Chair",
-            "description": "A wicker chair in black perfect for a dining table.",
-            "price": "199.00",
-            "category": 2,
-            "image": "black-wicker-chair.jpg"
+            "name": "go pro",
+            "description": "go pro black.",
+            "price": "499.00",
+            "category": 3,
+            "image": "gopro1.jpg"
         }
     },
     {
@@ -144,875 +144,11 @@
         "model": "stock.item",
         "fields": {
             "code": 13,
-            "name": "Blue Leather Chair",
-            "description": "A classic shaped dining chair finished with contemporary blue leather.",
-            "price": "249.00",
-            "category": 2,
-            "image": "blue-chair.jpg"
-        }
-    },
-    {
-        "pk": 14,
-        "model": "stock.item",
-        "fields": {
-            "code": 14,
-            "name": "Green and Orange Chair",
-            "description": "A 70's style colourful dining chair finished with orange fabric and a green frame.",
-            "price": "199.00",
-            "category": 2,
-            "image": "green-orange-chair.jpg"
-        }
-    },
-    {
-        "pk": 15,
-        "model": "stock.item",
-        "fields": {
-            "code": 15,
-            "name": "Grey Fabric Armchair",
-            "description": "An extremely comfortable grey fabric armchair.",
-            "price": "599.00",
-            "category": 2,
-            "image": "grey-armchair.jpg"
-        }
-    },
-    {
-        "pk": 16,
-        "model": "stock.item",
-        "fields": {
-            "code": 16,
-            "name": "Tan Leather Chair",
-            "description": "A beautiful contemporary tan leather chair perfect for a minimal interior.",
-            "price": "499.00",
-            "category": 7,
-            "image": "leather-chair.jpg"
-        }
-    },
-    {
-        "pk": 17,
-        "model": "stock.item",
-        "fields": {
-            "code": 17,
-            "name": "Weaved Chair",
-            "description": "A stunning hand weaved wooden accent chair.",
-            "price": "399.00",
-            "category": 2,
-            "image": "mesh-chair-2.jpg"
-        }
-    },
-    {
-        "pk": 18,
-        "model": "stock.item",
-        "fields": {
-            "code": 18,
-            "name": "Wicker Dinning Chair",
-            "description": "A contemporary mid-century styled wicker dining chair.",
-            "price": "199.00",
-            "category": 2,
-            "image": "mesh-chair.jpg"
-        }
-    },
-    {
-        "pk": 19,
-        "model": "stock.item",
-        "fields": {
-            "code": 19,
-            "name": "Mid-Century Armchair",
-            "description": "A stunning mid-century modern armchair.",
-            "price": "359.00",
-            "category": 2,
-            "image": "mid-century-armchair.jpg"
-        }
-    },
-    {
-        "pk": 20,
-        "model": "stock.item",
-        "fields": {
-            "code": 20,
-            "name": "Orange Leather Armchair",
-            "description": "A contemporary orange leather armchair.",
-            "price": "599.00",
-            "category": 2,
-            "image": "orange-armchair.jpg"
-        }
-    },
-    {
-        "pk": 21,
-        "model": "stock.item",
-        "fields": {
-            "code": 21,
-            "name": "Pair of Wooden Stools",
-            "description": "A pair of dark walnut wooden stools.",
-            "price": "199.00",
-            "category": 2,
-            "image": "pair-of-stools.jpg"
-        }
-    },
-    {
-        "pk": 22,
-        "model": "stock.item",
-        "fields": {
-            "code": 22,
-            "name": "Palm Tree Print Chair",
-            "description": "A fun palm tree printed dining chair to add some fun to your interior.",
-            "price": "159.00",
-            "category": 7,
-            "image": "palm-chair.jpg"
-        }
-    },
-    {
-        "pk": 23,
-        "model": "stock.item",
-        "fields": {
-            "code": 23,
-            "name": "Purple Chair",
-            "description": "A stunning velvet purple accent chair to add a pop of colour to any interior.",
-            "price": "259.00",
-            "category": 2,
-            "image": "purple-chair.jpg"
-        }
-    },
-    {
-        "pk": 24,
-        "model": "stock.item",
-        "fields": {
-            "code": 24,
-            "name": "Red Fabric Armchair",
-            "description": "A stunning red fabric armchair to brighten up your living area.",
-            "price": "459.00",
-            "category": 2,
-            "image": "red-armchair.jpg"
-        }
-    },
-    {
-        "pk": 25,
-        "model": "stock.item",
-        "fields": {
-            "code": 25,
-            "name": "Mustard Dining Chair",
-            "description": "Beautiful mustard coloured dining chair perfect to add a pop of colour to any dining area.",
-            "price": "159.00",
-            "category": 2,
-            "image": "yellow-chair.jpg"
-        }
-    },
-    {
-        "pk": 26,
-        "model": "stock.item",
-        "fields": {
-            "code": 26,
-            "name": "Black Dining Set",
-            "description": "Contemporary black dining set seating up to 6 people",
-            "price": "659.00",
+            "name": "go pro max 2",
+            "description": "go max white and grey.",
+            "price": "449.00",
             "category": 3,
-            "image": "black-dining-set.jpg"
-        }
-    },
-    {
-        "pk": 27,
-        "model": "stock.item",
-        "fields": {
-            "code": 27,
-            "name": "Marble Coffee Table",
-            "description": "Contemporary Marbled effect coffee table.",
-            "price": "159.00",
-            "category": 7,
-            "image": "coffee-table-1.jpg"
-        }
-    },
-    {
-        "pk": 28,
-        "model": "stock.item",
-        "fields": {
-            "code": 28,
-            "name": "Colourful Printed Coffee Table",
-            "description": "Contemporary printed coffee table in a fun playful pattern.",
-            "price": "159.00",
-            "category": 3,
-            "image": "colourful-table.jpg"
-        }
-    },
-    {
-        "pk": 29,
-        "model": "stock.item",
-        "fields": {
-            "code": 29,
-            "name": "Mid-Century Dining Set",
-            "description": "Contemporary mid-century dining set for up to 4 people.",
-            "price": "659.00",
-            "category": 3,
-            "image": "dining-set-2.jpg"
-        }
-    },
-    {
-        "pk": 30,
-        "model": "stock.item",
-        "fields": {
-            "code": 30,
-            "name": "Floating Desk Set",
-            "description": "Contemporary floating wooden desk and chair for a modern minimal office.",
-            "price": "259.00",
-            "category": 3,
-            "image": "floating-desk.jpg"
-        }
-    },
-    {
-        "pk": 31,
-        "model": "stock.item",
-        "fields": {
-            "code": 31,
-            "name": "Glass Dining Set",
-            "description": "Stunning glass dining table and chair set for up to 6 people.",
-            "price": "899.00",
-            "category": 3,
-            "image": "glass-dining-set.jpg"
-        }
-    },
-    {
-        "pk": 32,
-        "model": "stock.item",
-        "fields": {
-            "code": 32,
-            "name": "Flower Printed Coffee Table",
-            "description": "Contemporary flower printed coffee table to add a pop of colour to your living area.",
-            "price": "159.00",
-            "category": 3,
-            "image": "green-coffee-table.jpg"
-        }
-    },
-    {
-        "pk": 33,
-        "model": "stock.item",
-        "fields": {
-            "code": 33,
-            "name": "Pink Side Table",
-            "description": "Colourfull pink side table to add a bit of fun to any interior.",
-            "price": "89.00",
-            "category": 3,
-            "image": "pink-sidetable.jpg"
-        }
-    },
-    {
-        "pk": 34,
-        "model": "stock.item",
-        "fields": {
-            "code": 34,
-            "name": "Pink Dining Table",
-            "description": "A fun pink dining table to add a pop of colour to any dining area.",
-            "price": "359.00",
-            "category": 3,
-            "image": "pink-table.jpg"
-        }
-    },
-    {
-        "pk": 35,
-        "model": "stock.item",
-        "fields": {
-            "code": 35,
-            "name": "Minimal Side Table",
-            "description": "A simple minimal white side table.",
-            "price": "99.00",
-            "category": 3,
-            "image": "white-side-table.jpg"
-        }
-    },
-    {
-        "pk": 36,
-        "model": "stock.item",
-        "fields": {
-            "code": 36,
-            "name": "Wooden Desk",
-            "description": "A stunning wooden desk and chair for a contemporary home office.",
-            "price": "559.00",
-            "category": 7,
-            "image": "wooden-desk.jpg"
-        }
-    },
-    {
-        "pk": 37,
-        "model": "stock.item",
-        "fields": {
-            "code": 37,
-            "name": "Wooden Dining Set",
-            "description": "A beautiful walnut dining set for a soft mid-century feel.",
-            "price": "359.00",
-            "category": 3,
-            "image": "wooden-dining-set.jpg"
-        }
-    },
-    {
-        "pk": 38,
-        "model": "stock.item",
-        "fields": {
-            "code": 38,
-            "name": "Wooden Side Table",
-            "description": "A beautiful simple wooden side table for a soft minimal feel.",
-            "price": "99.00",
-            "category": 3,
-            "image": "wooden-sidetable.jpg"
-        }
-    },
-    {
-        "pk": 39,
-        "model": "stock.item",
-        "fields": {
-            "code": 39,
-            "name": "Black wooden Sideboard",
-            "description": "A beautiful dark wooden sideboard.",
-            "price": "499.00",
-            "category": 4,
-            "image": "black-wooden-sideboard.jpg"
-        }
-    },
-    {
-        "pk": 40,
-        "model": "stock.item",
-        "fields": {
-            "code": 40,
-            "name": "Sky Blue Sideboard",
-            "description": "A stunning sky blue coloured sideboard.",
-            "price": "399.00",
-            "category": 4,
-            "image": "blue-sideboard.jpg"
-        }
-    },
-    {
-        "pk": 41,
-        "model": "stock.item",
-        "fields": {
-            "code": 41,
-            "name": "Floating Sideboard",
-            "description": "A contemporary floating sideboard.",
-            "price": "349.00",
-            "category": 4,
-            "image": "floating-sideboard.jpg"
-        }
-    },
-    {
-        "pk": 42,
-        "model": "stock.item",
-        "fields": {
-            "code": 42,
-            "name": "Dark Marbled Sideboard",
-            "description": "A beautiful dark marbled sideboard.",
-            "price": "489.00",
-            "category": 4,
-            "image": "sideboard-1.jpg"
-        }
-    },
-    {
-        "pk": 43,
-        "model": "stock.item",
-        "fields": {
-            "code": 43,
-            "name": "Light Marbled Sideboard",
-            "description": "A beautiful Light marbled sideboard.",
-            "price": "489.00",
-            "category": 4,
-            "image": "sideboard-2.jpg"
-        }
-    },
-    {
-        "pk": 44,
-        "model": "stock.item",
-        "fields": {
-            "code": 44,
-            "name": "Industrial Bedside Wall Lamp",
-            "description": "An industrial styled bedside wall lamp.",
-            "price": "89.00",
-            "category": 5,
-            "image": "bedside-lamp-2.jpg"
-        }
-    },
-    {
-        "pk": 45,
-        "model": "stock.item",
-        "fields": {
-            "code": 45,
-            "name": "Wooden Bedside Wall Lamp",
-            "description": "A minimal wooden bedside wall lamp.",
-            "price": "79.00",
-            "category": 5,
-            "image": "bedside-wall-lamp.jpg"
-        }
-    },
-    {
-        "pk": 46,
-        "model": "stock.item",
-        "fields": {
-            "code": 46,
-            "name": "Industrial Floor Lamp",
-            "description": "Ann industrial style floor lamp.",
-            "price": "99.00",
-            "category": 5,
-            "image": "black-floor-lamp.jpg"
-        }
-    },
-    {
-        "pk": 47,
-        "model": "stock.item",
-        "fields": {
-            "code": 47,
-            "name": "Black Pendant Light",
-            "description": "A minimal black pendant light, hang alone or add more together.",
-            "price": "69.00",
-            "category": 5,
-            "image": "black-pendant-light-2.jpg"
-        }
-    },
-    {
-        "pk": 48,
-        "model": "stock.item",
-        "fields": {
-            "code": 48,
-            "name": "Industrial Pendant Light",
-            "description": "An industrial style pendant light.",
-            "price": "69.00",
-            "category": 5,
-            "image": "black-pendant-light.jpg"
-        }
-    },
-    {
-        "pk": 49,
-        "model": "stock.item",
-        "fields": {
-            "code": 49,
-            "name": "Bronze Pendant Light",
-            "description": "A minimal bronze pendant light.",
-            "price": "109.00",
-            "category": 5,
-            "image": "bronze-pendant-light.jpg"
-        }
-    },
-    {
-        "pk": 50,
-        "model": "stock.item",
-        "fields": {
-            "code": 50,
-            "name": "Brown Industrial Pendant",
-            "description": "A brown industrial styled pendant light.",
-            "price": "69.00",
-            "category": 5,
-            "image": "brown-pendant-light.jpg"
-        }
-    },
-    {
-        "pk": 51,
-        "model": "stock.item",
-        "fields": {
-            "code": 51,
-            "name": "Brass Floor Lamp",
-            "description": "A minimal black and brass floor lamp.",
-            "price": "119.00",
-            "category": 5,
-            "image": "floor-lamp-2.jpg"
-        }
-    },
-    {
-        "pk": 52,
-        "model": "stock.item",
-        "fields": {
-            "code": 52,
-            "name": "Green Pendant Light",
-            "description": "A minimal green pendant light.",
-            "price": "99.00",
-            "category": 5,
-            "image": "green-pendant-light.jpg"
-        }
-    },
-    {
-        "pk": 53,
-        "model": "stock.item",
-        "fields": {
-            "code": 53,
-            "name": "Grey Pendant Light",
-            "description": "A minimal grey pendant light.",
-            "price": "119.00",
-            "category": 5,
-            "image": "grey-pendant.jpg"
-        }
-    },
-    {
-        "pk": 54,
-        "model": "stock.item",
-        "fields": {
-            "code": 54,
-            "name": "Lantern Styled Pendants",
-            "description": "An interesting latern styled pendant.",
-            "price": "99.00",
-            "category": 5,
-            "image": "lantern-pendants.jpg"
-        }
-    },
-    {
-        "pk": 55,
-        "model": "stock.item",
-        "fields": {
-            "code": 55,
-            "name": "Tubular Pendant",
-            "description": "A contemporary tubular pendant light.",
-            "price": "129.00",
-            "category": 5,
-            "image": "pendant-lighting-2.jpg"
-        }
-    },
-    {
-        "pk": 56,
-        "model": "stock.item",
-        "fields": {
-            "code": 56,
-            "name": "Modern Table Lamp",
-            "description": "A beautiful modern table lamp.",
-            "price": "59.00",
-            "category": 5,
-            "image": "table-lamp-1.jpg"
-        }
-    },
-    {
-        "pk": 56,
-        "model": "stock.item",
-        "fields": {
-            "code": 56,
-            "name": "U-Shaped Table Lamp",
-            "description": "A contemporary u-shaped table lamp.",
-            "price": "79.00",
-            "category": 5,
-            "image": "ushaped-lamp.jpg"
-        }
-    },
-    {
-        "pk": 57,
-        "model": "stock.item",
-        "fields": {
-            "code": 57,
-            "name": "White Pendant Light",
-            "description": "A clean modern white pendant light.",
-            "price": "99.00",
-            "category": 7,
-            "image": "white-pendant-light.jpg"
-        }
-    },
-    {
-        "pk": 58,
-        "model": "stock.item",
-        "fields": {
-            "code": 58,
-            "name": "Wooden Pendant Light",
-            "description": "A clean contemporary wodden pendant light.",
-            "price": "89.00",
-            "category": 5,
-            "image": "wooden-pendants-1.jpg"
-        }
-    },
-    {
-        "pk": 59,
-        "model": "stock.item",
-        "fields": {
-            "code": 59,
-            "name": "Wooden Wall Light",
-            "description": "A contemporary wooden wall light.",
-            "price": "99.00",
-            "category": 5,
-            "image": "wooden-wall-lamp.jpg"
-        }
-    },
-    {
-        "pk": 60,
-        "model": "stock.item",
-        "fields": {
-            "code": 60,
-            "name": "Typography Poster",
-            "description": "A framed typography poster.",
-            "price": "49.00",
-            "category": 6,
-            "image": "alphabet-poster.jpg"
-        }
-    },
-    {
-        "pk": 61,
-        "model": "stock.item",
-        "fields": {
-            "code": 61,
-            "name": "Black Handled Vase",
-            "description": "A contemporary vase with double handles in black.",
-            "price": "29.00",
-            "category": 6,
-            "image": "black-vase-2.jpg"
-        }
-    },
-    {
-        "pk": 61,
-        "model": "stock.item",
-        "fields": {
-            "code": 61,
-            "name": "Black Handled Vase",
-            "description": "A contemporary vase with double handles in black.",
-            "price": "29.00",
-            "category": 6,
-            "image": "black-vase-2.jpg"
-        }
-    },
-    {
-        "pk": 62,
-        "model": "stock.item",
-        "fields": {
-            "code": 62,
-            "name": "Black Vase",
-            "description": "A modern vase in black.",
-            "price": "29.00",
-            "category": 6,
-            "image": "black-vase.jpg"
-        }
-    },
-    {
-        "pk": 62,
-        "model": "stock.item",
-        "fields": {
-            "code": 62,
-            "name": "Blue Ceramic Set",
-            "description": "A royal blue ceramic dinner set.",
-            "price": "89.00",
-            "category": 6,
-            "image": "blue-ceramic-set.jpg"
-        }
-    },
-    {
-        "pk": 63,
-        "model": "stock.item",
-        "fields": {
-            "code": 63,
-            "name": "Blue Vase",
-            "description": "A modern oriental styled blue vase.",
-            "price": "35.00",
-            "category": 6,
-            "image": "blue-vase.jpg"
-        }
-    },
-    {
-        "pk": 64,
-        "model": "stock.item",
-        "fields": {
-            "code": 64,
-            "name": "Green Ceramic Set",
-            "description": "A contemporary green ceramic dinner set.",
-            "price": "79.00",
-            "category": 7,
-            "image": "ceramic-dinner-set.jpg"
-        }
-    },
-    {
-        "pk": 65,
-        "model": "stock.item",
-        "fields": {
-            "code": 65,
-            "name": "Ceramic Expresso cup",
-            "description": "A cmodern ceramic expresso cup.",
-            "price": "9.00",
-            "category": 6,
-            "image": "ceramic-expresso-cup.jpg"
-        }
-    },
-    {
-        "pk": 66,
-        "model": "stock.item",
-        "fields": {
-            "code": 66,
-            "name": "Ceramic Jug Set",
-            "description": "A ceramic set with jug and sugar bowl.",
-            "price": "29.00",
-            "category": 6,
-            "image": "ceramic-jug-and-sugarbowl.jpg"
-        }
-    },
-    {
-        "pk": 67,
-        "model": "stock.item",
-        "fields": {
-            "code": 67,
-            "name": "Ceramic Jar Set",
-            "description": "A set of ceramic jars.",
-            "price": "39.00",
-            "category": 7,
-            "image": "ceramic-jug-and-sugarbowl.jpg"
-        }
-    },
-    {
-        "pk": 68,
-        "model": "stock.item",
-        "fields": {
-            "code": 68,
-            "name": "Sugar Jar",
-            "description": "A ceramic sugar bowl.",
-            "price": "19.00",
-            "category": 6,
-            "image": "ceramic-sugarjar.jpg"
-        }
-    },
-    {
-        "pk": 69,
-        "model": "stock.item",
-        "fields": {
-            "code": 69,
-            "name": "Ceramic Vase",
-            "description": "A contemporary ceramic vase.",
-            "price": "29.00",
-            "category": 6,
-            "image": "ceramic-vase.jpg"
-        }
-    },
-    {
-        "pk": 70,
-        "model": "stock.item",
-        "fields": {
-            "code": 70,
-            "name": "Geometric Painting",
-            "description": "A contemporary geometric painting.",
-            "price": "299.00",
-            "category": 6,
-            "image": "colourfull-painting.jpg"
-        }
-    },
-    {
-        "pk": 71,
-        "model": "stock.item",
-        "fields": {
-            "code": 71,
-            "name": "Copper Vase",
-            "description": "A beautiful vase made from copper.",
-            "price": "89.00",
-            "category": 6,
-            "image": "copper-vase.jpg"
-        }
-    },
-    {
-        "pk": 72,
-        "model": "stock.item",
-        "fields": {
-            "code": 72,
-            "name": "Ceramic Cups",
-            "description": "A set of dark grey ceramic cups.",
-            "price": "39.00",
-            "category": 6,
-            "image": "dark-ceramic-cups.jpg"
-        }
-    },
-    {
-        "pk": 73,
-        "model": "stock.item",
-        "fields": {
-            "code": 73,
-            "name": "Grey Ceramic Plate",
-            "description": "A set of grey ceramic plates.",
-            "price": "49.00",
-            "category": 6,
-            "image": "grey-ceramic-plate.jpg"
-        }
-    },
-    {
-        "pk": 74,
-        "model": "stock.item",
-        "fields": {
-            "code": 74,
-            "name": "Light Blue Dinner Set",
-            "description": "A sky blue ceramic dinner set.",
-            "price": "69.00",
-            "category": 6,
-            "image": "light-blue-ceramic-dinnerset.jpg"
-        }
-    },
-    {
-        "pk": 75,
-        "model": "stock.item",
-        "fields": {
-            "code": 75,
-            "name": "Photograpy Artpiece",
-            "description": "A beautiful framed photograph.",
-            "price": "259.00",
-            "category": 6,
-            "image": "photography.jpg"
-        }
-    },
-    {
-        "pk": 76,
-        "model": "stock.item",
-        "fields": {
-            "code": 76,
-            "name": "Vase Set",
-            "description": "A beautiful set of a red and blue oriental vase.",
-            "price": "89.00",
-            "category": 6,
-            "image": "red-and-blue-vase.jpg"
-        }
-    },
-    {
-        "pk": 77,
-        "model": "stock.item",
-        "fields": {
-            "code": 77,
-            "name": "Robot Print",
-            "description": "A fun framed robot print.",
-            "price": "99.00",
-            "category": 6,
-            "image": "robot-painting.jpg"
-        }
-    },
-    {
-        "pk": 78,
-        "model": "stock.item",
-        "fields": {
-            "code": 78,
-            "name": "Teal Ceramic Plate",
-            "description": "A beautiful teal ceramic plate set.",
-            "price": "79.00",
-            "category": 6,
-            "image": "teal-ceramic-plate.jpg"
-        }
-    },
-    {
-        "pk": 79,
-        "model": "stock.item",
-        "fields": {
-            "code": 79,
-            "name": "White Ceramic Plate",
-            "description": "A modern set of white ceramic plates.",
-            "price": "89.00",
-            "category": 7,
-            "image": "white-ceramic-plate.jpg"
-        }
-    },
-    {
-        "pk": 80,
-        "model": "stock.item",
-        "fields": {
-            "code": 80,
-            "name": "White Vase",
-            "description": "A beautiful clean and minimal white vase.",
-            "price": "29.00",
-            "category": 6,
-            "image": "white-vase.jpg"
-        }
-    },
-    {
-        "pk": 81,
-        "model": "stock.item",
-        "fields": {
-            "code": 81,
-            "name": "Wooden Vase",
-            "description": "A hand crafted set of wooden vases.",
-            "price": "69.00",
-            "category": 6,
-            "image": "wooden-vase.jpg"
-        }
-    },
-    {
-        "pk": 82,
-        "model": "stock.item",
-        "fields": {
-            "code": 82,
-            "name": "Yellow Glass Vase",
-            "description": "A contemporary hand blown yellow glass vase.",
-            "price": "49.00",
-            "category": 7,
-            "image": "yellow-glass-vase.jpg"
+            "image": "gopro2.jpg"
         }
     }
 ]

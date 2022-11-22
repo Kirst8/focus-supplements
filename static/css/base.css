@@ -758,13 +758,13 @@ input:-webkit-autofill {
 
 .hero-col-left {
     height: 50%;
-    background: url('/media/chair-hero.jpg') no-repeat center center;
+    background: url('/media/hero3.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .hero-col-right {
     height: 50%;
-    background: url('/media/green-sofa-hero.jpg') no-repeat center center;
+    background: url('/media/hero.jpg') no-repeat center center;
     background-size: cover;
 }
 
