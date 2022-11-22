@@ -22,10 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ('*7bo@7k)j2tc+1+&@ghv$c*%y=!%+ooflt=b3d0rc32_l2pg#s')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if "IN_DEVELOPMENT" in os.environ:
+    DEBUG = True
+else:
+    DEBUG = False
+
 
 ALLOWED_HOSTS = ["infocus.herokuapp.com","localhost"]
 
@@ -191,9 +195,9 @@ DELIVERY_COST_PERCENTAGE = 5
 STANDARD_HOME_DELIVERY_COST_MIN = 10
 
 # Stripe variables
-STRIPE_PUBLIC_KEY ='pk_test_51JJrFdDLJJ7bNy0mAFKBk9kkHCpVYUaCIZBHUB7D8TgH8Z5JIUvRdQxtlvwch4TGrLH85sieGKKGJppX6g3WOmoN00mc4wWE0s'
-STRIPE_SECRET_KEY = 'sk_test_51JJrFdDLJJ7bNy0mHo7cWT9Hwq8P6yPvvU8p2HeNgCyo2il4JBjJgT5fMGBEitIy53kxHNZFWyMYwnCZnSuvFK6M000taFaDtH'
-STRIPE_WEBHOOK_SECRET =  'whsec_5Io29nzvZedL5UAz8PnqqpeeoOZknIeg'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET', '')
 STRIPE_CURRENCY = 'eur'
 
 # Facebook login
