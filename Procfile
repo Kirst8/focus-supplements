@@ -1,1 +1,0 @@
-web: gunicorn in-focus.wsgi:application

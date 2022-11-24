@@ -31,7 +31,10 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ["infocus.herokuapp.com","localhost"]
+ # Add Render.com URL to allowed hosts
+ RENDER_EXTERNAL_HOSTNAME = os.environ.get('https://in-focus.onrender.com')
+ if RENDER_EXTERNAL_HOSTNAME:
+   ALLOWED_HOSTS.append(https://in-focus.onrender.com)
 
 
 # Application definition
