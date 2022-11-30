@@ -1,1 +1,1 @@
-web: gunicorn infocus.wsgi:application
+web: gunicorn: infocus.wsgi:application
