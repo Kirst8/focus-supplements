@@ -407,7 +407,7 @@ input:-webkit-autofill {
 }
 
 .top-nav-colored {
-    background-color: #153344f6;
+    background-color: 000000;
 }
 
 .hamburger {
@@ -422,7 +422,7 @@ input:-webkit-autofill {
 
 .line {
     height: 0.2rem;
-    background-color: #EDEDE9;
+    background-color: 282A3A;
     margin: 0.4rem 0;
     transform-origin: right;
     transition: all 0.75s;
@@ -472,7 +472,7 @@ input:-webkit-autofill {
 
 .top-nav-item i {
     font-size: 2rem;
-    color: #EDEDE9;
+    color: 282A3A;
 }
 
 .account-dropdown {
@@ -481,7 +481,7 @@ input:-webkit-autofill {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #153344d8;
+    background-color: C69749;
     transform: translateY(-50vh);
     transition: all .85s ease-in-out;
     z-index: 100;
@@ -497,7 +497,7 @@ input:-webkit-autofill {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(21, 51, 68, 0.847);
+    background-color: rgb(40, 42, 58);
     z-index: 100;
     transform: translateX(-37.5rem);
     transition: all .85s ease-in-out;
@@ -523,13 +523,13 @@ input:-webkit-autofill {
 
 .nav-close:hover span,
 .dropdown-close:hover span {
-    background-color: rgb(141, 141, 140);
+    background-color: rgb(198, 151, 73);
 }
 
 .line-x,
 .line-y {
     height: 0.2rem;
-    background-color: #EDEDE9;
+    background-color: #282A3A;
     margin: 0.4rem 0;
     width: 3rem;
     z-index: 200;
@@ -732,7 +732,7 @@ input:-webkit-autofill {
 
 .search-sublist button:hover {
     background-color: #EDEDE9;
-    color: #153243;
+    color: #282A3A;
 }
 
 .cart-number {
@@ -740,7 +740,7 @@ input:-webkit-autofill {
     background-color: #EDEDE9;
     border-radius: 50%;
     padding: .5rem .75rem;
-    color: #153243;
+    color: #282A3A;
     font-size: 1.15rem;
     transition: all .5s ease-in;
 }
@@ -805,7 +805,7 @@ input:-webkit-autofill {
 .about-col p {
     margin: 3rem 2rem;
     font-size: 2rem;
-    color: #153243;
+    color: #282A3A;
     text-align: center;
 }
 
@@ -844,7 +844,7 @@ input:-webkit-autofill {
 }
 
 .clickable {
-    background-color: #153243;
+    background-color: #5bafdf;;
     transition: all .25s ease-out;
 }
 
@@ -919,7 +919,7 @@ input:-webkit-autofill {
 .controls ul li {
     height: 10px;
     width: 10px;
-    border: 1px solid #1532439d;
+    border: 1px solid #735F32;
     margin: 5px;
     display: inline-block;
     border-radius: 50%;
@@ -927,7 +927,7 @@ input:-webkit-autofill {
 }
 
 .controls ul li.active {
-    background-color: #153243c9;
+    background-color: #282A3A;
 }
 
 /* ----------------------------------- Shop by categories */
@@ -1049,13 +1049,13 @@ input:-webkit-autofill {
 }
 
 .newsletter-form button[type="submit"] {
-    color: #EDEDE9;
-    background-color: #153243;
+    color: #C69749;
+    background-color: #282A3A;
     height: 4rem;
     padding: 0 1rem;
     font-size: 1.5rem;
     transition: all .5s ease;
-    border: 1px solid #153243;
+    border: 1px solid #5bafdf;
 }
 
 .newsletter-form button[type="submit"]:hover {
@@ -1066,7 +1066,7 @@ input:-webkit-autofill {
 /* ----------------------------------------footer section  */
 
 .footer-container {
-    background-color: #153344d8;
+    background-color: #282A3A;
     position: absolute;
     bottom: 0;
     height: 40rem;
@@ -1107,7 +1107,7 @@ input:-webkit-autofill {
 .social-col h3 {
     text-align: center;
     font-size: 1.5rem;
-    color: #EDEDE9;
+    color: #C69749;
 }
 
 .social-media {
@@ -1125,8 +1125,8 @@ input:-webkit-autofill {
 }
 
 .social-media a i:hover {
-    color: #153243;
-    background-color: #EDEDE9;
+    color: #282A3A;
+    background-color: #C69749;
     border-radius: .5rem;
 }
 
@@ -1134,7 +1134,7 @@ input:-webkit-autofill {
 
 .nav-background {
     height: 6rem;
-    background-color: #153344d8;
+    background-color: #282A3A;
     position: fixed;
     z-index: 50;
 }
@@ -1150,8 +1150,8 @@ input:-webkit-autofill {
 .our-story-hero-col h1 {
     font-size: 5rem;
     transform: translateY(25rem);
-    background-color: #153243;
-    color: #EDEDE9;
+    background-color: #282A3A;;
+    color: #C69749;
     padding: 1rem 3rem;
 }
 
@@ -1166,7 +1166,7 @@ input:-webkit-autofill {
 
 .our-story-col {
     flex-direction: column;
-    border: .1rem solid #D1D1C7;
+    border: .1rem solid #C69749;
 }
 
 .our-story-col h2 {
@@ -1205,7 +1205,7 @@ input:-webkit-autofill {
 }
 
 .items-subheading a {
-    color: #2a6486;
+    color:#282A3A;
     font-size: 1.4rem;
 }
 
@@ -1229,9 +1229,9 @@ input:-webkit-autofill {
 }
 
 #sort-selector {
-    background-color: #EDEDE9;
-    border: .1rem solid #153243;
-    color: #153243;
+    background-color: #C69749;
+    border: .1rem solid #282A3A;
+    color: #282A3A;
     font-size: 1.4rem;
     margin-top: 2rem;
 }
@@ -1251,14 +1251,14 @@ input:-webkit-autofill {
 
 .step-links a {
     font-size: 1.25rem;
-    color: #2a6486;
+    color: #735F32;
     margin: 0 .5rem;
     text-decoration: none;
     transition: all .25s ease-in;
 }
 
 .step-links a:hover {
-    color: #153243;
+    color: #282A3A;
     text-decoration: underline;
 }
 
@@ -1309,7 +1309,7 @@ td p {
 }
 
 .update-quantity-link {
-    color: #2a6486;
+    color: #282A3A;
 }
 
 /* Toats */
@@ -1382,7 +1382,7 @@ td p {
 
 .plus-btn,
 .minus-btn {
-    border: .1rem solid #153243;
+    border: .1rem solid #282A3A;
     height: 2.5rem;
     width: 2.5rem;
     margin-top: 1.3rem;
@@ -1391,7 +1391,7 @@ td p {
 
 .plus-btn:hover,
 .minus-btn:hover {
-    background-color: #153243;
+    background-color: #282A3A;
 }
 
 .plus-btn i:hover,
@@ -1410,12 +1410,12 @@ td p {
 .modal-button {
     height: 3.25rem;
     width: 15rem;
-    border: .1rem solid #153243;
+    border: .1rem solid #282A3A;
     transition: all .5s ease-in;
 }
 
 .cancel-btn:hover {
-    background-color: #153243;
+    background-color: #282A3A;
     color: #EDEDE9;
 }
 

@@ -30,6 +30,7 @@ if "IN_DEVELOPMENT" in os.environ:
 else:
     DEBUG = False
 
+
 ALLOWED_HOSTS =["https://in-focus.onrender.com", "localhost"]
 
 
