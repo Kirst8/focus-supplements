@@ -18,7 +18,7 @@
             "description": "Nikon black 83.",
             "price": "1099.00",
             "category": 1,
-            "image": "nikon2"
+            "image": "nikon2.jpg"
         }
     },
     {
@@ -149,6 +149,18 @@
             "price": "449.00",
             "category": 3,
             "image": "gopro2.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "stock.item",
+        "fields": {
+         "code": 14,
+            "name": "nikon pexels",
+            "description": "black with gold finish.",
+            "price": "449.00",
+            "category": 1,
+            "image": "nikontest.avif"
         }
     }
 ]
