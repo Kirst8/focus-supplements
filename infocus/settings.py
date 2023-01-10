@@ -25,14 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if "DEVELOPMENT" in os.environ:
+if "IN_DEVELOPMENT" in os.environ:
     DEBUG = True
-else:
-    DEBUG = False
 
 
 
-ALLOWED_HOSTS =["https://in-focus.onrender.com"]
+
+ALLOWED_HOSTS =["https://in-focus.onrender.com",'localhost']
 
 
 
