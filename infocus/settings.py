@@ -29,7 +29,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS =["https://in-focus.onrender.com", "localhost"]
+ALLOWED_HOSTS =["https://in-focus.onrender.com"]
 
 
 
