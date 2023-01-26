@@ -162,5 +162,42 @@
             "category": 1,
             "image": "nikontest.avif"
         }
+    },
+    {
+        "pk": 15,
+        "model": "stock.item",
+        "fields": {
+         "code": 14,
+            "name": "sony vlog",
+            "description": "black and red",
+            "price": "349.00",
+            "category": 1,
+            "image": "sony4.avif"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "stock.item",
+        "fields": {
+         "code": 17,
+            "name": "Sony mic",
+            "description": "black",
+            "price": "349.00",
+            "category": 1,
+            "image": "sony5.avif"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "stock.item",
+        "fields": {
+         "code": 17,
+            "name": "sony vlog set up",
+            "description": "black set",
+            "price": "849.00",
+            "category": 1,
+            "image": "sonyvlog.avif"
+        }
     }
+
 ]
