@@ -257,7 +257,7 @@ if "USE_AWS" in os.environ:
 
 if 'IN_DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_EMAIL_ADDRESS = 'kibrooker@gmail.com'
+    DEFAULT_EMAIL_ADDRESS = 'kirst8.brooker@gmail.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
